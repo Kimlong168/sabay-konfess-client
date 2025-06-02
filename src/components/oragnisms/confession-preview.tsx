@@ -181,9 +181,9 @@ export const ConfessionPreview = () => {
             </CardContent>
 
             <CardFooter>
-              <div className="flex flex-row gap-4 justify-center">
+              <div className="flex flex-row gap-4 justify-center w-full">
                 <Button
-                  className=" bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
+                  className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
                   onClick={handleCopy}
                 >
                   {copied ? (
