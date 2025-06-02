@@ -180,10 +180,10 @@ export const ConfessionPreview = () => {
               )}
             </CardContent>
 
-            <CardFooter className="flex flex-col space-y-1">
-              <div className="flex flex-row gap-4 p-6">
+            <CardFooter>
+              <div className="flex flex-row gap-4 justify-center">
                 <Button
-                  className="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
+                  className=" bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
                   onClick={handleCopy}
                 >
                   {copied ? (
@@ -202,7 +202,7 @@ export const ConfessionPreview = () => {
                 <Button
                   onClick={handleShare}
                   variant="outline"
-                  className="flex-1 border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
+                  className=" border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
                 >
                   <Share2 className="sm:mr-2 h-4 w-4" />
                   <span className="hidden sm:inline-block">Share</span>
@@ -210,7 +210,7 @@ export const ConfessionPreview = () => {
                 <Button
                   onClick={handleDownload}
                   variant="outline"
-                  className="flex-1 border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
+                  className=" border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
                 >
                   <Download className="sm:mr-2 h-4 w-4" />
                   <span className="hidden sm:inline-block">Download</span>
