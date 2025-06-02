@@ -1,20 +1,20 @@
 import { ConfessionForm } from "@/components/oragnisms/confession-form";
 import { notFound } from "next/navigation";
 
-interface PageProps {
-  params: {
-    confession?: string[];
-  };
-}
+// Updated to match Next.js 15+ expectations
+export default async function ConfessionPage({
+  params,
+}: {
+  params: Promise<{ [key: string]: string | string[] }>;
+}) {
+  // Await the params since they're now a Promise
+  const resolvedParams = await params;
+  const rawParams = resolvedParams.confession;
 
-export default function ConfessionPage({ params }: PageProps) {
-  const userParams = params.confession;
-
-  if (!userParams || userParams.length !== 2) {
-    notFound(); // Invalid URL format
+  if (!rawParams || !Array.isArray(rawParams) || rawParams.length !== 2) {
+    return notFound();
   }
 
-  const [username, chatId] = userParams;
-
+  const [username, chatId] = rawParams;
   return <ConfessionForm username={username} chatId={chatId} />;
 }

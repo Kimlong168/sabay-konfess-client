@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     title: "Sabay Konfess",
     description:
       "A safe space to express your deepest thoughts, secrets, and confessions. No judgment, no names, just pure honesty.",
-    url: "https://kimlongchann.dev",
+    url: "https://sabaykonfess.vercel.app",
     siteName: "Sabay Konfess",
     type: "website",
     images: [
       {
-        url: "https://kimlongchann.dev/og-image.png",
+        url: "https://sabaykonfess.vercel.app/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sabay Konfess",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Kimlong Chann - Full Stack Developer",
     description:
       "Hi there, I am Kimlong Chann, a full stack developer specializing in building modern web applications using React, Node.js, Laravel, and more.",
-    images: ["https://kimlongchann.dev/og-image.png"],
+    images: ["https://sabaykonfess.vercel.app/images/og-image.png"],
   },
 };
 
