@@ -1,8 +1,7 @@
 import { ConfessionForm } from "@/components/oragnisms/confession-form";
 import { notFound } from "next/navigation";
 
-// Updated to match Next.js 15+ expectations
-export default async function ConfessionPage({
+export default async function Page({
   params,
 }: {
   params: Promise<{ [key: string]: string | string[] }>;

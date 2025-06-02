@@ -166,7 +166,7 @@ export const ConfessionForm: React.FC<Props> = ({ username, chatId }) => {
 
         <div className="mt-3 text-blue-500">
           <Link href="https://t.me/sabaykonfess_bot?start">
-            <button>Get your own confession link now</button>
+            <button>Get your own confess link now</button>
           </Link>
         </div>
       </div>
