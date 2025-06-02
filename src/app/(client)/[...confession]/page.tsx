@@ -16,5 +16,9 @@ export default async function ConfessionPage({
   }
 
   const [username, chatId] = rawParams;
-  return <ConfessionForm username={username} chatId={chatId} />;
+  return (
+    <main>
+      <ConfessionForm username={username} chatId={chatId} />
+    </main>
+  );
 }

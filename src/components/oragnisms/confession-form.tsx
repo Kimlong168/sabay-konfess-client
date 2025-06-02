@@ -18,6 +18,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { sendMessage } from "@/api/telegram-api";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 interface Props {
   chatId: string;
@@ -162,6 +163,12 @@ export const ConfessionForm: React.FC<Props> = ({ username, chatId }) => {
         <p className="text-sm text-purple-500 font-medium">
           🔒 Your identity is safe with us • 💜 Spread love, not hate
         </p>
+
+        <div className="mt-3 text-blue-500">
+          <Link href="https://t.me/sabaykonfess_bot?start">
+            <button>Get your own confession link now</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
