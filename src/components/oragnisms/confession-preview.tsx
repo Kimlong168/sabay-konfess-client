@@ -112,7 +112,7 @@ export const ConfessionPreview = () => {
               variant="ghost"
               className="text-purple-700 hover:text-pink-600 hover:bg-pink-100 transition-colors"
             >
-              <ArrowLeft className="mr-2 h-4 w-4" />
+              <ArrowLeft className="sm:mr-2 h-4 w-4" />
               Back to Home
             </Button>
           </Link>
@@ -181,20 +181,20 @@ export const ConfessionPreview = () => {
             </CardContent>
 
             <CardFooter className="flex flex-col space-y-1">
-              <div className="flex flex-col sm:flex-row gap-4 p-6">
+              <div className="flex flex-row gap-4 p-6">
                 <Button
                   className="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
                   onClick={handleCopy}
                 >
                   {copied ? (
                     <>
-                      <Check className="mr-2 h-4 w-4" />
-                      Copied!
+                      <Check className="sm:mr-2 h-4 w-4" />
+                      <span className="hidden sm:inline-block">Copied!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="mr-2 h-4 w-4" />
-                      Copy Link
+                      <Copy className="sm:mr-2 h-4 w-4" />
+                      <span className="hidden sm:inline-block">Copy Link</span>
                     </>
                   )}
                 </Button>
@@ -204,16 +204,16 @@ export const ConfessionPreview = () => {
                   variant="outline"
                   className="flex-1 border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
                 >
-                  <Share2 className="mr-2 h-4 w-4" />
-                  Share
+                  <Share2 className="sm:mr-2 h-4 w-4" />
+                  <span className="hidden sm:inline-block">Share</span>
                 </Button>
                 <Button
                   onClick={handleDownload}
                   variant="outline"
                   className="flex-1 border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
                 >
-                  <Download className="mr-2 h-4 w-4" />
-                  Download
+                  <Download className="sm:mr-2 h-4 w-4" />
+                  <span className="hidden sm:inline-block">Download</span>
                 </Button>
               </div>
             </CardFooter>
