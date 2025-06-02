@@ -24,7 +24,7 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
-            🤫 Sabay Konfess
+            Sabay Konfess
           </h1>
 
           <p className="text-xl md:text-2xl text-purple-700 mb-4 font-medium">
@@ -52,7 +52,7 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-pink-200 shadow-lg">
             <div className="text-3xl mb-2">🔒</div>
             <h3 className="font-bold text-purple-700 mb-2">100% Anonymous</h3>
@@ -76,7 +76,7 @@ export function Hero() {
               No judgment, only understanding
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

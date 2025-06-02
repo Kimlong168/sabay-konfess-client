@@ -113,8 +113,8 @@ export function Footer() {
             Made with 💜 for people who need a safe space to share
           </p>
           <p className="text-sm text-purple-400">
-            © 2024 Secret Confessions. All rights reserved. • Your anonymity is
-            our promise.
+            © 2025 Sabay Konfess. All rights reserved. • Your anonymity is our
+            promise.
           </p>
         </div>
       </div>
