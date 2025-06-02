@@ -124,7 +124,7 @@ export const ConfessionPreview = () => {
           <div className="absolute -top-2 -right-6 w-6 h-6 bg-purple-300 rounded-full opacity-60 animate-bounce delay-300"></div>
           <div className="absolute top-8 -right-2 w-4 h-4 bg-yellow-300 rounded-full opacity-60 animate-bounce delay-700"></div>
 
-          <div id="download" className="p-2">
+          <div id="download">
             <Card className="w-full bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 border-2 border-pink-200 shadow-xl">
               <CardHeader className="text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 opacity-50"></div>
