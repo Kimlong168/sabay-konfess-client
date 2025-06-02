@@ -119,105 +119,111 @@ export const ConfessionPreview = () => {
         </div> */}
 
         {/* Floating decorative elements */}
-        <div className="relative" id="download">
+        <div className="relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 bg-pink-300 rounded-full opacity-60 animate-bounce"></div>
           <div className="absolute -top-2 -right-6 w-6 h-6 bg-purple-300 rounded-full opacity-60 animate-bounce delay-300"></div>
           <div className="absolute top-8 -right-2 w-4 h-4 bg-yellow-300 rounded-full opacity-60 animate-bounce delay-700"></div>
 
-          <Card className="w-full bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 border-2 border-pink-200 shadow-xl">
-            <CardHeader className="text-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 opacity-50"></div>
-              <div className="relative z-10">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <MessageCircle className="h-6 w-6 text-purple-500" />
-                  <Sparkles className="h-5 w-5 text-pink-500 animate-spin" />
+          <div id="download" className="p-2">
+            <Card className="w-full bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 border-2 border-pink-200 shadow-xl">
+              <CardHeader className="text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 opacity-50"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <MessageCircle className="h-6 w-6 text-purple-500" />
+                    <Sparkles className="h-5 w-5 text-pink-500 animate-spin" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                    ✨ Anonymous Confession ✨
+                  </CardTitle>
+                  <p className="text-sm text-purple-600 mt-2 font-medium">
+                    Shared {timeAgo}
+                  </p>
                 </div>
-                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  ✨ Anonymous Confession ✨
-                </CardTitle>
-                <p className="text-sm text-purple-600 mt-2 font-medium">
-                  Shared {timeAgo}
-                </p>
-              </div>
-            </CardHeader>
+              </CardHeader>
 
-            <CardContent className="p-6">
-              {message ? (
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border-2 border-purple-100 shadow-inner">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">
-                        ?
-                      </div>
-                      <div>
-                        <p className="font-semibold text-purple-700">
-                          Anonymous
-                        </p>
-                        <p className="text-xs text-gray-500">{timeAgo}</p>
+              <CardContent className="p-6">
+                {message ? (
+                  <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border-2 border-purple-100 shadow-inner">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">
+                          ?
+                        </div>
+                        <div>
+                          <p className="font-semibold text-purple-700">
+                            Anonymous
+                          </p>
+                          <p className="text-xs text-gray-500">{timeAgo}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="text-gray-700 text-lg leading-relaxed whitespace-pre-wrap break-words">
-                    {message}
-                  </div>
+                    <div className="text-gray-700 text-lg leading-relaxed whitespace-pre-wrap break-words">
+                      {message}
+                    </div>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {["anonymous", "confession", "secret"].map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium"
-                      >
-                        #{tag}
-                      </span>
-                    ))}
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {["anonymous", "confession", "secret"].map(
+                        (tag, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium"
+                          >
+                            #{tag}
+                          </span>
+                        )
+                      )}
+                    </div>
                   </div>
+                ) : (
+                  <div className="text-center p-12">
+                    <p className="text-gray-500">No confession message found</p>
+                  </div>
+                )}
+              </CardContent>
+
+              <CardFooter>
+                <div className="flex flex-row gap-4 justify-center w-full">
+                  <Button
+                    className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
+                    onClick={handleCopy}
+                  >
+                    {copied ? (
+                      <>
+                        <Check className="sm:mr-2 h-4 w-4" />
+                        <span className="hidden sm:inline-block">Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="sm:mr-2 h-4 w-4" />
+                        <span className="hidden sm:inline-block">
+                          Copy Link
+                        </span>
+                      </>
+                    )}
+                  </Button>
+
+                  <Button
+                    onClick={handleShare}
+                    variant="outline"
+                    className=" border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
+                  >
+                    <Share2 className="sm:mr-2 h-4 w-4" />
+                    <span className="hidden sm:inline-block">Share</span>
+                  </Button>
+                  <Button
+                    onClick={handleDownload}
+                    variant="outline"
+                    className=" border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
+                  >
+                    <Download className="sm:mr-2 h-4 w-4" />
+                    <span className="hidden sm:inline-block">Download</span>
+                  </Button>
                 </div>
-              ) : (
-                <div className="text-center p-12">
-                  <p className="text-gray-500">No confession message found</p>
-                </div>
-              )}
-            </CardContent>
-
-            <CardFooter>
-              <div className="flex flex-row gap-4 justify-center w-full">
-                <Button
-                  className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white border-0 rounded-xl shadow-md hover:shadow-lg transition-all"
-                  onClick={handleCopy}
-                >
-                  {copied ? (
-                    <>
-                      <Check className="sm:mr-2 h-4 w-4" />
-                      <span className="hidden sm:inline-block">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="sm:mr-2 h-4 w-4" />
-                      <span className="hidden sm:inline-block">Copy Link</span>
-                    </>
-                  )}
-                </Button>
-
-                <Button
-                  onClick={handleShare}
-                  variant="outline"
-                  className=" border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
-                >
-                  <Share2 className="sm:mr-2 h-4 w-4" />
-                  <span className="hidden sm:inline-block">Share</span>
-                </Button>
-                <Button
-                  onClick={handleDownload}
-                  variant="outline"
-                  className=" border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all"
-                >
-                  <Download className="sm:mr-2 h-4 w-4" />
-                  <span className="hidden sm:inline-block">Download</span>
-                </Button>
-              </div>
-            </CardFooter>
-          </Card>
+              </CardFooter>
+            </Card>
+          </div>
         </div>
       </div>
     </main>
