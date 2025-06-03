@@ -16,7 +16,7 @@ import {
 // import { Input } from "@/components/ui/input";
 // import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { sendMessage } from "@/api/telegram-api";
+import { sendConfession } from "@/api/telegram-api";
 import { toast } from "react-toastify";
 import Link from "next/link";
 
@@ -44,9 +44,10 @@ export const ConfessionForm: React.FC<Props> = ({ username, chatId }) => {
     // Simulate form submission
     setIsSubmitting(true);
     try {
-      await sendMessage({
+      await sendConfession({
         message: confession,
         chatId,
+        type: "message",
       });
       console.log(username);
       setConfession("");
