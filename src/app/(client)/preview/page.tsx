@@ -4,6 +4,9 @@ import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Sabay Konfess",
+  description: "",
+  openGraph: {},
+  twitter: {},
 };
 
 export default async function Page() {
