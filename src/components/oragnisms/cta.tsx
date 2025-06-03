@@ -46,15 +46,15 @@ export function CTA() {
             </div>
 
             <div className="flex items-center justify-center gap-8 text-sm opacity-80">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col md:flex-row items-center gap-2">
                 <Shield className="h-4 w-4" />
                 <span>100% Anonymous</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col md:flex-row items-center gap-2">
                 <Heart className="h-4 w-4" />
                 <span>Judgment Free</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col md:flex-row items-center gap-2">
                 <Sparkles className="h-4 w-4" />
                 <span>Instant Sharing</span>
               </div>
