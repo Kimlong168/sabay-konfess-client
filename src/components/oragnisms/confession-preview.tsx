@@ -67,7 +67,7 @@ export const ConfessionPreview = () => {
           .then((dataUrl1: string) => {
             const link = document.createElement("a");
             link.href = dataUrl1;
-            link.download = `sabaykonfess.png`;
+            link.download = `sabaykonfess.jpg`;
 
             link.click();
           })
